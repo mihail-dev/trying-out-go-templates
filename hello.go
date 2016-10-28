@@ -16,7 +16,7 @@ type Inventory struct {
 func main() {
 	fmt.Printf("Hello, world.\n")
 	sweaters := Inventory{"wool", 17}
-	tmpl, err := template.New("test").Parse("{{.Count}} items are made of {{.Material}}\n")
+	tmpl, err := template.New("test").Parse(nginxConfTemplate)
 	if err != nil { panic(err) }
 	err = tmpl.Execute(os.Stdout, sweaters)
 	if err != nil { panic(err) }
